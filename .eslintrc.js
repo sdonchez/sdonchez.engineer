@@ -7,9 +7,6 @@ module.exports = {
     'plugin:vue/essential',
     'eslint:recommended'
   ],
-  parserOptions: {
-    parser: 'babel-eslint'
-  },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
@@ -21,7 +18,9 @@ module.exports = {
         '**/tests/unit/**/*.spec.{j,t}s?(x)'
       ],
       env: {
-        mocha: true
+        mocha: true,
+        node: true,
+        es2022: true,
       }
     }
   ]

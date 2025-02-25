@@ -1,20 +1,14 @@
-<template>
-	<b-card class="my-4 w-100 h-100" :id=card.slug>
-		<b-card-header>
-			<h3 class="text-center">
+<!-- <template>
+	<Card class="my-4 w-100 h-100" :id=card.slug>
+		<template #title>
 				{{ card.title }}
-			</h3>
-			<h5 class="text-center">
+		</template>
+		<template #subtitle>
 				{{ card.subtitle1 }}
-			</h5>
-			<h5 class="text-center">
 				{{ card.subtitle2 }}
-			</h5>
-      <h5 class="text-center">
-        {{ card.subtitle3 }}
-      </h5>
-		</b-card-header>
-		<b-card-body>
+				{{ card.subtitle3 }}
+      	</template>
+		<template #content>
 			<b-row align-v="center">
 				<b-col lg="4" class="text-center py-4" :order-lg="card.iconRight">
 					<picture>
@@ -45,12 +39,14 @@
           </p>
         </b-col>
 			</b-row>
-		</b-card-body>
-	</b-card>
+		</template>
+	</Card>
 </template>
 
 <script>
+import { Card } from 'primevue';
+
 export default {
 	props: ["card"],
 }
-</script>
+</script> -->

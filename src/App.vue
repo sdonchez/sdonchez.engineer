@@ -1,15 +1,15 @@
 <template>
-	<div id="app" style="overflow-x: hidden;" class="min-vh-100 d-flex flex-column">
 		<navigation></navigation>
 		<router-view class="flex-fill"/>
-		<SiteFooter></SiteFooter>
-	</div>
+		<!-- <SiteFooter></SiteFooter> -->
 </template>
+
 
 <!--suppress JSUnresolvedFunction -->
 <script>
+console.log('url', import.meta.url)
 import Navigation from "@/components/Navigation"
-import SiteFooter from "@/components/SiteFooter"
+// import SiteFooter from "@/components/SiteFooter"
 
 // noinspection JSUnusedGlobalSymbols
 export default {
@@ -26,7 +26,7 @@ export default {
 	},
 	components: {
 		Navigation,
-		SiteFooter,
+		//SiteFooter,
 	},
 	methods: {
 		// showModal() {

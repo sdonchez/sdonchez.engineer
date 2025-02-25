@@ -1,27 +1,27 @@
-<template>
-	<b-container fluid="true">
-		<b-aspect class="panel" id="welcome-panel" aspect="16:7" align-v="center">
-			<b-row align-h="center" align-v="center" class="py-4 h-100">
-					<picture>
-						<source type="image/webp" srcset="./../assets/HeadshotCrop-512.webp">
-						<source type="image/jpeg" srcset="./../assets/HeadshotCrop-512.jpg">
-						<img src="./../assets/HeadshotCrop-256.jpg" class="img-fluid rounded-circle mx-5" width="320px" height="320px" alt="Headshot Photo of Stephen Donchez" sm="12">
-					</picture>
-					<h1 class="display-1 text-center welcome-tex mx-5">Hi, I'm Stephen Donchez</h1>
-			</b-row>
-		</b-aspect>
-		<b-row class="bg-primary px-5">
+<template #container>
+	<div class="grow shrink basis-auto flex flex-col">
+		<div class="panel flex md:aspect-[16/7] mx-auto items-center justify-center min-h-full" id="welcome-panel">
+			<div class="flex flex-col md:flex-row items-center justify-center py-4">
+			<picture>
+				<source type="image/webp" srcset="./../assets/HeadshotCrop-512.webp" />
+				<source type="image/jpeg" srcset="./../assets/HeadshotCrop-512.jpg" />
+				<img src="./../assets/HeadshotCrop-256.jpg" class="rounded-full mx-5 md:h-[320px] md:w-[320px] h-[128px] w-[128px]" width="320px" height="320px" alt="Headshot Photo of Stephen Donchez" />
+			</picture>
+			<h1 class="md:text-8xl text-6xl text-center mx-5">Hi, I'm Stephen Donchez</h1>
+			</div>
+		</div>
+		<div class=" bg-primary px-5">
 			<h2 class="mx-auto text-center">A Systems Engineer, but a whole lot more</h2>
-			<b-row class="copy">
+			<div class="copy">
 				<p>
 					On paper, I'm a Systems Engineer with a Bachelors and a Masters in Computer Engineering and a minor in Computer Science. But that's just a small part of who I am. Sure, I'm passionate about embedded systems, and am excited to be putting my knowledge of software development, FPGAs, and the latest in embedded security to work. But I'm also a 5th degree black belt, have 6 years of experience as a live event technician working in Audio, Video, and Lighting for events of all sizes, and an avid ball-thrower whenever my dog asks. I encourage you to take a moment to explore who I am (in digital form), and to reach out with any questions!
 				</p>
 				<p>
 					You can also download my <a :href=this.$resumeFile target="_blank"> resume</a> or visit me on	<a href="https://www.linkedin.com/in/stephen-donchez/" target="_blank"> LinkedIn</a> to learn more about my professional and academic activities.
 				</p>
-			</b-row>
-		</b-row>
-	</b-container>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -100,10 +100,6 @@ p {
 @media screen and (max-width: 768px) {
 	.headshot {
 		text-align: center;
-	}
-
-	.welcome-text {
-		font-size: calc(4rem + 0.6vw) !important
 	}
 	h2 {
 		// font-size: 3rem !important;

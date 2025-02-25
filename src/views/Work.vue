@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 	<b-container>
 		<b-row>
 			<InfoCard v-for="card in cards" :key="card.title" :card="card" />
@@ -116,4 +116,4 @@ export default {
 		}
 	},
 }
-</script>
+</script> -->

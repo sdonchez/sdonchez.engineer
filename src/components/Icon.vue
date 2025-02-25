@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 	<div class="icon">
 		<a :href="platform.link" v-b-tooltip :title="platform.tooltip">
 			<font-awesome-icon
@@ -20,4 +20,4 @@ export default {
 	display: inline;
 	padding-left: 0.5rem;
 }
-</style>
+</style> -->

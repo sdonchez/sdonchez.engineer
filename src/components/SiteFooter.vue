@@ -1,5 +1,5 @@
 <!--suppress SpellCheckingInspection -->
-<template>
+<!-- <template>
 	<footer>
 		<b-row class="bg-secondary px-5 py-3 text-center">
 			<b-col lg="6" class="text-lg-left">
@@ -92,4 +92,4 @@ export default {
 		}
 	},
 }
-</script>
+</script> -->

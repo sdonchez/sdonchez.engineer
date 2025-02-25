@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 	<b-container>
 		<b-row>
 			<CertificationCard v-for="card in cards" :key="card.title" :card="card" />
@@ -56,4 +56,4 @@ export default {
 		document.head.appendChild(credlyScript);
 	}
 }
-</script>
+</script> -->

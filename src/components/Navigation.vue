@@ -1,50 +1,55 @@
 <template>
 	<div>
-		<b-navbar toggleable="lg" class="navbar-dark bg-primary px-5">
-			<b-navbar-brand href="/"><b-avatar src="favicon-32x32.png" class="mx-2" size="32px"></b-avatar>Stephen G. Donchez</b-navbar-brand>
-
-			<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-			<b-collapse id="nav-collapse" is-nav>
-				<b-navbar-nav>
-					<b-nav-item
-						v-for="page in pages"
-						:key="page.name"
-						:to="page.path"
-						:router="true"
-						ripple
-					>
-						{{ page.name }}
-					</b-nav-item>
-				</b-navbar-nav>
-
-				<!--<b-navbar-nav class="ml-auto">
-					<b-nav-form>
-						<b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-						<b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-					</b-nav-form>
-				</b-navbar-nav>-->
-			</b-collapse>
-		</b-navbar>
+		<Menubar :model="items" class="flex flex-row flex-nowrap !py-4">
+			<template #start><a class="flex flex-row items-center name-title" href="/" target="_self"><Avatar image="favicon-32x32.png" class="mx-4" size="32px"></Avatar>Stephen G. Donchez</a></template>
+		</Menubar>
 	</div>
 </template>
 
-<script>
-export default {
-	name: "navigation",
-	data: () => {
-		return {
-			pages: [
-				{ path: "/", name: "Home", exact: true },
-        { path: "/work", name: "Work Experience", exact: false },
-        { path: "/projects", name: "Projects", exact: false },
-				{ path: "/education", name: "Education", exact: false },
-        { path: "/publications", name: "Publications", exact: false },
-        { path: "/skills", name: "Skills", exact: false },
-        { path: "/certifications", name: "Certifications", exact: false}
-				//{ path: "/blog", name: "Blog", exact: false },
-			],
-		}
-	},
-}
+
+<script setup>
+import { ref } from 'vue';
+
+const items = ref([
+  {
+    label: 'Home',
+	to: '/'
+  },
+  {
+    label: 'Work Experience',
+	to: '/work'
+  },
+  {
+    label: 'Projects',
+	to: '/projects'
+  },
+  {
+	label: 'Publications',
+	to: '/publications'
+  },
+  {
+	label: 'Skills',
+	to: '/skills'
+  },
+  {
+	label: 'Certifications',
+	to: '/certifications'
+  }
+]);
 </script>
+
+<style>
+.name-title {
+	color: #fff;
+	padding-top: .32rem;
+	padding-bottom: .32rem;
+	margin-right: 1rem;
+	font-size: 1.2rem;
+	line-height: inherit;
+	white-space: nowrap
+}
+.p-menubar-button{
+	margin-left: auto;
+	margin-right: 1rem;
+}
+</style>

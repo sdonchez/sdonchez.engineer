@@ -1,12 +1,12 @@
-<template>
+<!-- <template>
 	<b-container>
 		<b-row>
 			<InfoCard v-for="card in cards" :key="card.title" :card="card" />
 		</b-row>
 	</b-container>
-</template>
+</template> -->
 <!--suppress SpellCheckingInspection -->
-<script>
+<!-- <script>
 	import InfoCard from "@/components/InfoCard"
 	export default {
 		name: "Projects",
@@ -100,4 +100,4 @@
 			}
 		},
 	}
-</script>
+</script> -->
