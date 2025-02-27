@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @plugin "tailwindcss-primeui";
+
+.link-accent{
+    color: #00bc8c
+}
+
+/*neither defining this using define preset, nor scoping it to the relevant classes seems to make it take effect*/
+:root {
+    --p-tooltip-background: var(--color-zinc-900) !important
+}

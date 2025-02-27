@@ -1,18 +1,18 @@
 <!--suppress SpellCheckingInspection -->
-<!-- <template>
+<template>
 	<footer>
-		<b-row class="bg-secondary px-5 py-3 text-center">
-			<b-col lg="6" class="text-lg-left">
+		<div class="flex flex-wrap bg-zinc-700 px-5 py-3 text-center">
+			<div class="md:text-lg text-center lg:text-left lg:max-w-fit basis-full">
 				Copyright &copy; 2020&mdash;{{ currentYear }}
-				<div class="d-none d-md-inline px-1">Stephen Donchez</div>
+				<div class="hidden md:inline px-1">Stephen Donchez</div>
 				<Icon v-for="site in social" :key="site.link" :platform="site" />
-        <span class="px-2"><a :href="this.$resumeFile" target="_blank" class="text-white">Resume</a></span>
-			</b-col>
-			<b-col lg="6" class="text-lg-right">
+        		<span class="px-2"><a :href="this.$resumeFile" target="_blank" class="text-white">Resume</a></span>
+			</div>
+			<div class="md:text-lg text-center lg:text-right lg:max-w-fit basis-full lg:ml-auto">
 				Built With:
 				<Icon v-for="site in tools" :key="site.link" :platform="site" />
-			</b-col>
-		</b-row>
+			</div>
+		</div>
 	</footer>
 </template>
 
@@ -28,7 +28,7 @@ export default {
 			currentYear: new Date().getFullYear(),
 			social: [
 				{
-					link: "mailto:sdonchez@villanova.edu",
+					link: "mailto:steve@sdonchez.engineer",
 					tooltip: "Email",
 					iconType: "fas",
 					icon: "envelope",
@@ -92,4 +92,4 @@ export default {
 		}
 	},
 }
-</script> -->
+</script>

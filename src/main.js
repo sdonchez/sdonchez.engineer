@@ -9,6 +9,7 @@ import VueMeta from 'vue-meta'
 import App from './App.vue'
 import { createRouter } from './router'
 import VueGtag from "vue-gtag";
+import Tooltip from 'primevue/tooltip';
 
 //FontAwesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -85,17 +86,22 @@ const MyPreset = definePreset(Aura, {
 			},
 			item: {
 				focusBackground: '{primary.600}'
+			},
+			mobileButton:{
+				hoverBackground: '{primary.600}',
+				color: '{white}'
+			},
+			submenu:{
+				background: '{primary.400}'
 			}
-
 		},
-		mobileButton:{
-			hoverBackground: '{primary.600}',
-			color: '{white}'
-		}
-		}
+	}
 });
 
 app.use(router)
+
+app.directive('tooltip', Tooltip);
+
 app.use(PrimeVue, {
 	theme: {
 		preset: MyPreset,

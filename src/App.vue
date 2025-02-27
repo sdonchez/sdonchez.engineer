@@ -1,7 +1,7 @@
 <template>
 		<navigation></navigation>
 		<router-view class="flex-fill"/>
-		<!-- <SiteFooter></SiteFooter> -->
+		<SiteFooter></SiteFooter>
 </template>
 
 
@@ -9,7 +9,7 @@
 <script>
 console.log('url', import.meta.url)
 import Navigation from "@/components/Navigation"
-// import SiteFooter from "@/components/SiteFooter"
+import SiteFooter from "@/components/SiteFooter"
 
 // noinspection JSUnusedGlobalSymbols
 export default {

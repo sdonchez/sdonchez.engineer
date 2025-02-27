@@ -1,6 +1,6 @@
-<!-- <template>
+<template>
 	<div class="icon">
-		<a :href="platform.link" v-b-tooltip :title="platform.tooltip">
+		<a :href="platform.link" v-tooltip.top="{value: platform.tooltip}">
 			<font-awesome-icon
 				:icon="[platform.iconType, platform.icon]"
 				:style="{ color: 'white' }"
@@ -20,4 +20,4 @@ export default {
 	display: inline;
 	padding-left: 0.5rem;
 }
-</style> -->
+</style>
