@@ -11,32 +11,6 @@ import { createRouter } from './router'
 import VueGtag from "vue-gtag";
 import Tooltip from 'primevue/tooltip';
 
-//FontAwesome Icons
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faVuejs } from '@fortawesome/free-brands-svg-icons'
-import { faFontAwesome } from '@fortawesome/free-brands-svg-icons'
-import { faStackOverflow } from '@fortawesome/free-brands-svg-icons'
-import { faBootstrap } from '@fortawesome/free-brands-svg-icons'
-import { faNpm } from '@fortawesome/free-brands-svg-icons'
-import { faCloudflare } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-
-library.add(faEnvelope)
-library.add(faGithub)
-library.add(faLinkedin)
-library.add(faVuejs)
-library.add(faBootstrap)
-library.add(faFontAwesome)
-library.add(faStackOverflow)
-library.add(faNpm)
-library.add(faCloudflare)
-
-//PrimeVue Components
-
 //Run Vue3 in Vue2 Compatibility Mode for now
 configureCompat({
 	MODE: 2,
@@ -115,7 +89,7 @@ app.use(PrimeVue, {
 	}
 });
 
-app.component('font-awesome-icon', FontAwesomeIcon)
+//app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(VueGtag, {
 	config: {
 		id: "G-TT76YTVCYJ"

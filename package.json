@@ -2,7 +2,7 @@
   "name": "sdonchez.engineer",
   "version": "2.0.0-alpha.001",
   "private": true,
-  "type":"module",
+  "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
@@ -12,13 +12,9 @@
   },
   "dependencies": {
     "@fontsource/roboto": "^5.1.1",
-    "@fortawesome/fontawesome-svg-core": "^6.7.2",
-    "@fortawesome/free-brands-svg-icons": "^6.7.2",
-    "@fortawesome/free-regular-svg-icons": "^6.7.2",
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/vue-fontawesome": "^3.0.8",
     "@primeuix/themes": "^1.0.0",
     "@vue/compat": "^3.1.0",
+    "primeicons": "^7.0.0",
     "primevue": "^4.3.1",
     "stylus": "^0.64.0",
     "stylus-loader": "^8.1.1",

@@ -48,6 +48,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 //noinspection CssUnknownTarget
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+@import 'primeicons/primeicons.css';
 #app {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

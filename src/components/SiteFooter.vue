@@ -18,6 +18,7 @@
 
 <script>
 import Icon from "@/components/Icon"
+
 export default {
 	name: "siteFooter",
 	components: {
@@ -30,63 +31,69 @@ export default {
 				{
 					link: "mailto:steve@sdonchez.engineer",
 					tooltip: "Email",
-					iconType: "fas",
-					icon: "envelope",
+					iconType: "classful",
+					icon: "pi pi-envelope",
 				},
 				{
 					link: "https://github.com/sdonchez",
 					tooltip: "GitHub",
-					iconType: "fab",
-					icon: "github",
+					iconType: "classful",
+					icon: "pi pi-github",
 				},
 				{
 					link: "https://www.linkedin.com/in/stephen-donchez/",
 					tooltip: "LinkedIn",
-					iconType: "fab",
-					icon: "linkedin",
+					iconType: "classful",
+					icon: "pi pi-linkedin",
 				}
 			],
 			tools: [
 				{
 					link: "https://vuejs.org",
 					tooltip: "VueJS",
-					iconType: "fab",
-					icon: "vuejs" },
+					iconType: "classful",
+					icon: "fa-brands fa-vuejs" },
 				{
 					link: "https://github.com/sdonchez/sdonchez.github.io",
 					tooltip: "GitHub",
-					iconType: "fab",
-					icon: "github",
+					iconType: "classful",
+					icon: "pi pi-github",
 				},
 				{
-					link: "https://getbootstrap.com/",
-					tooltip: "Bootstrap",
-					iconType: "fab",
-					icon: "bootstrap",
+					link: "https://primevue.org/",
+					tooltip: "PrimeVue",
+					iconType: "classful",
+					icon: "pi pi-prime"
+				},
+				{
+					link: "foobar.com",
+					tooltip: "Tailwind CSS",
+					iconType: "svg",
+					icon:  "M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"
 				},
 				{
 					link: "https://fontawesome.com/",
 					tooltip: "FontAwesome",
-					iconType: "fab",
-					icon: "font-awesome",
+					iconType: "classful",
+					icon: "fa-regular fa-font-awesome",
 				},
 				{
 					link: "https://cloudflare.com/",
 					tooltip: "Cloudflare",
-					iconType: "fab",
-					icon: "cloudflare"
+					iconType: "classful",
+					icon: "fa-brands fa-cloudflare"
 				},
 				{ 
 					link: "https://npmjs.com", 
 					tooltip: "npm", 
-					iconType: "fab", 
-					icon: "npm" 
+					iconType: "classful", 
+					icon: "fa-brands fa-npm" 
 				},
 				{
 					link: "https://stackoverflow.com/",
 					tooltip: "Stack Overflow (because what project is complete without it)",
-					iconType: "fab",
-					icon: "stack-overflow",
+					iconType: "classful",
+					icon: "fa-brands fa-stack-overflow",
 				},
 			],
 		}
