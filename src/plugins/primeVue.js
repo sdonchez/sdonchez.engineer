@@ -49,6 +49,16 @@ const SGDPreset = definePreset(Aura, {
 				background: '{primary.400}'
 			}
 		},
+		card:{
+			root: {
+				background: '{surface.800}'
+			},
+			title:{
+				font:{
+					size: '2rem'
+				}
+			}
+		}
 	}
 });
 

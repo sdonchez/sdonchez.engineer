@@ -9,3 +9,16 @@
 :root {
     --p-tooltip-background: var(--color-zinc-900) !important
 }
+
+.p-card-title{
+    text-align: center;
+}
+
+.p-card-caption{
+    background-color: var(--p-surface-700);
+}
+
+h4{
+    font-size: 1.4rem;
+    padding-bottom: .4rem;
+}

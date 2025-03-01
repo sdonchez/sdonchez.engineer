@@ -1,9 +1,9 @@
 <template>
-	<b-container>
-		<b-row>
+	<div class="flex shrink basis-auto lg:max-w-[1140px] w-full px-4 ml-auto mr-auto">
+		<div class="flex flex-wrap h-fit">
 			<SkillCard v-for="card in cards" :key="card.title" :card="card" />
-		</b-row>
-	</b-container>
+		</div>
+	</div>
 </template>
 
 <script>

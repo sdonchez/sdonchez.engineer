@@ -1,6 +1,6 @@
 <template>
 		<navigation></navigation>
-		<router-view class="flex-fill"/>
+		<router-view class="flex-fill grow"/>
 		<SiteFooter></SiteFooter>
 </template>
 
