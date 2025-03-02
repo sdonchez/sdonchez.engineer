@@ -1,9 +1,9 @@
-<!-- <template>
-	<b-container>
-		<b-row>
+<template>
+	<div class="flex shrink basis-auto lg:max-w-[1140px] w-full px-4 ml-auto mr-auto">
+		<div class="flex flex-wrap h-fit">
 			<InfoCard v-for="card in cards" :key="card.title" :card="card" />
-		</b-row>
-	</b-container>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -24,7 +24,7 @@ export default {
 			cards: [
 				{
 					title: "An Efficient and Secure Architecture for FPGA-Based Multi-Tenant Cloud Applications",
-					subtitle1: "Master's Thesis, Villanova University",
+					subtitles: ["Master's Thesis, Villanova University"],
 					slug: "thesis",
 					text: [
 						"<span class='font-italic font-weight-bold'>Abstract:</span>",
@@ -37,7 +37,7 @@ export default {
 					],
 					/*noinspect*/
 					icon: "VUENG.jpg",
-					iconRight: "false",
+					iconRight: false,
 					Alt: "Villanova College of Engineering Seal",
 					actions:[
 						{
@@ -60,7 +60,7 @@ export default {
 				},
 				{
 					title: "Memory Isolation for Multi-Tenant Data Integrity in Cloud MPSoC FPGAs",
-					subtitle1: "Conference Article, IEEE International Conference and Workshop on Computing and Communication (IEMCON) 2022",
+					subtitles: ["Conference Article, IEEE International Conference and Workshop on Computing and Communication (IEMCON) 2022"],
 					slug: "IEMCON",
 					text: [
 						"<span class='font-italic font-weight-bold'>Abstract:</span>",
@@ -70,7 +70,7 @@ export default {
 						"SoC FPGA, cloud computing, memory security, on-chip memory, implementation",
 
 						"<span class='font-italic font-weight-bold'>Accolades:</span>",
-						"<a href='./IEMCON22BestPaper.jpg' target='_blank'>Best Paper, VLSI and Microelectronic Circuit Embedded Systems, IEEE IEMCON 2022</a>"
+						"<a class='link-accent' href='./IEMCON22BestPaper.jpg' target='_blank'>Best Paper, VLSI and Microelectronic Circuit Embedded Systems, IEEE IEMCON 2022</a>"
 					],
 					actions: [
 						{
@@ -80,12 +80,12 @@ export default {
 					],
 					/*noinspect*/
 					icon: "IEEECS.png",
-					iconRight: "2",
+					iconRight: true,
 					Alt: "IEEE Computer Society Logo"
 				},
 				{
 					title: "Dynamic Scheduling of AES Cores for Aperiodic Tasks on Multi-tenant Cloud FPGAs",
-					subtitle1: "Conference Article, IEEE International Conference on Trust, Security, and Privacy in Computing and Communications (TrustCom) 2023",
+					subtitles: ["Conference Article, IEEE International Conference on Trust, Security, and Privacy in Computing and Communications (TrustCom) 2023"],
 					slug: "TrustCom",
 					text: [
 						"<span class='font-italic font-weight-bold'>Abstract:</span>",
@@ -109,4 +109,4 @@ export default {
 		}
 	},
 }
-</script> -->
+</script>

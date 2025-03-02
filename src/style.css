@@ -7,7 +7,7 @@
 
 /*neither defining this using define preset, nor scoping it to the relevant classes seems to make it take effect*/
 :root {
-    --p-tooltip-background: var(--color-zinc-900) !important
+    --p-tooltip-background: var(--color-zinc-900) !important;
 }
 
 .p-card-title{
@@ -16,9 +16,16 @@
 
 .p-card-caption{
     background-color: var(--p-surface-700);
+    padding-top: .4rem;
+    padding-bottom: .6rem;
 }
 
 h4{
     font-size: 1.4rem;
     padding-bottom: .4rem;
+}
+h5{
+    font-size: 1.2rem;
+    padding-bottom: .1rem;
+    color: white
 }

@@ -1,9 +1,9 @@
-<!-- <template>
-	<b-container>
-		<b-row>
+<template>
+	<div class="flex shrink basis-auto lg:max-w-[1140px] w-full px-4 ml-auto mr-auto">
+		<div class="flex flex-wrap h-fit">
 			<CertificationCard v-for="card in cards" :key="card.title" :card="card" />
-		</b-row>
-	</b-container>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -24,14 +24,16 @@ export default {
 			cards: [
 				{
 					title: "OCSMP SysML Model User",
-					subtitle1: "Object Management Group (OMG)-Certified SysML Professional (OCSMP)-Model User",
-					subtitle2: "Valid 9/22/2023 - 9/22/2028",
+					subtitles: [
+						"Object Management Group (OMG)-Certified SysML Professional (OCSMP)-Model User",
+						"Valid 9/22/2023 - 9/22/2028",
+					],
 					slug: "OCSMP-MU",
 					credential: "<div data-iframe-width=\"250\" data-iframe-height=\"250\" data-share-badge-id=\"3803d407-c817-4e07-8b7e-98d5ff108f85\" data-share-badge-host=\"https://www.credly.com\"></div>",
 					text: [
 						"The OCSMP SysML Model User certification indicates qualification \" to be a productive systems analyst on a systems development team employing a model-based systems engineering approach while using SysML.\" It is the first in a series of four cumulative certifications offered by the Object Management Group as part of their Certified SysML Professional Program.",
 
-						"I use SysML in my daily work as the Model Based Systems Engineering (MBSE) Lead for my current project at <a href=\"/work#L3H\">L3Harris Technologies</a>. In this role, I lead the development and maintenance of a complex SysML Model as part of the design of a system, and also act as a Subject Matter Expert (SME) for other individuals within the organization who are performing MBSE-related activities for their own programs.",
+						"I use SysML in my daily work as the Model Based Systems Engineering (MBSE) Lead for my current project at <a class='link-accent' href=\"/work#L3H\">L3Harris Technologies</a>. In this role, I lead the development and maintenance of a complex SysML Model as part of the design of a system, and also act as a Subject Matter Expert (SME) for other individuals within the organization who are performing MBSE-related activities for their own programs.",
 					],
 					actions: [
 						{
@@ -43,7 +45,7 @@ export default {
 							text: "Learn more about Model Based Systems Engineering",
 						}
 					],
-					credentialRight: "false",
+					credentialRight: false,
 				},
 			],
 		}
@@ -56,4 +58,4 @@ export default {
 		document.head.appendChild(credlyScript);
 	}
 }
-</script> -->
+</script>

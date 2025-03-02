@@ -1,12 +1,12 @@
-<!-- <template>
-	<b-container>
-		<b-row>
+<template>
+	<div class="flex shrink basis-auto lg:max-w-[1140px] w-full px-4 ml-auto mr-auto">
+		<div class="flex flex-wrap h-fit">
 			<InfoCard v-for="card in cards" :key="card.title" :card="card" />
-		</b-row>
-	</b-container>
-</template> -->
+		</div>
+	</div>
+</template>
 <!--suppress SpellCheckingInspection -->
-<!-- <script>
+<script>
 	import InfoCard from "@/components/InfoCard"
 	export default {
 		name: "Projects",
@@ -24,18 +24,19 @@
 				cards: [
 					{
 						title: "An Efficient and Secure Architecture for FPGA-based Multi-Tenant Cloud Applications",
-						subtitle1:"Master's Research",
+						subtitles:["Master's Research"],
 						slug: "Masters",
 						text: [
-							"I recently completed my thesis, which focused on enabling the use of FPGAs in a cloud environment. The complete work is available on <a href=\"https://www.proquest.com/docview/2821495143\">ProQuest</a>, but the abstract and a link to the GitHub repository containing the corresponding technical artifacts can be found on my <a href=\"/publications\">publications page</a>. If this work interests you, I'm happy to discuss it and/or see about making the full text available to you. Please don't hesitate to contact me if that's the case.",
+							"I recently completed my thesis, which focused on enabling the use of FPGAs in a cloud environment. The complete work is available on <a class='link-accent' href=\"https://www.proquest.com/docview/2821495143\">ProQuest</a>, but the abstract and a link to the GitHub repository containing the corresponding technical artifacts can be found on my <a class='link-accent' href=\"/publications\">publications page</a>. If this work interests you, I'm happy to discuss it and/or see about making the full text available to you. Please don't hesitate to contact me if that's the case.",
 						],
 						icon:"ConceptDiagramSimplified.png",
+						iconRight: true,
 						avatarSquare: true,
 						Alt: "Concept Diagram depicting the architecture presented in the Thesis"
 					},
 					{
 						title: "ChemCAT",
-						subtitle1: "Villanova University Chemical Container and Asset Tracker",
+						subtitles: ["Villanova University Chemical Container and Asset Tracker"],
 						slug: "ChemCAT",
 						text: [
 							"Villanova's Chemical Container and Asset Tracker (ChemCAT) system is a recent project to provide comprehensive cradle-to-grave tracking of the university's chemical assets. The project maintains a history of every chemical asset's movement throughout the university from its procurement through its distribution, use, and disposal. It also provides the capacity to look up the Safety Data Sheet (SDS) information associated with each chemical, as well as the ability to generate reports on individual assets or aggregate data.",
@@ -50,7 +51,7 @@
 					},
 					{
 						title: "VUTC Website Redesign",
-						subtitle1: "Villanova University Tech Crew",
+						subtitles: ["Villanova University Tech Crew"],
 						slug: "VUTC-site",
 						text: [
 							"Beginning in the spring of 2020, I, alongside a group of like minded students, began a redesign of VUTC's website, through which all aspects of the organization's operations are managed. The current site (as the redesign is still in progress following several periods of paused work) was developed in PHP without the use of any framework or cohesive style, and the effort of maintaining it was beginning to exceed the effort involved in re-writing it from the ground up.",
@@ -58,13 +59,13 @@
 							"The new site, like the ChemCAT project above, is built with the Laravel PHP framework and a bootstrapped front-end. The site also utilizes a MySQL/PDO database system, as well as extensive authentication and authorization gates to mitigate access to privileged portions of the site.",
 						],
 						icon: "VUTCWebsite.png",
-						iconRight: "2",
+						iconRight: true,
 						avatarSquare: true,
 						Alt: "Screenshot from the legacy VUTC website"
 					},
 					{
 						title: "PrintCheck3D",
-						subtitle1: "Senior Capstone Project",
+						subtitles: ["Senior Capstone Project"],
 						slug: "PrintCheck3D",
 						text: [
 							"Villanova's ECE capstone project is a three semester, group based experience that is designed to provide students with experience in the implementation of a concept under real world circumstances. For our capstone project, my team worked to implement what became the PrintCheck3D system, a system that monitored the college's fleet of 3D Printers to detect failed printjobs, and took action on those failures in order to preserve the print where possible, and otherwise to stop the print in order to prevent damage to the printer or the waste of additional consumable resources.",
@@ -84,7 +85,7 @@
 					},
 					{
 						title: "HKA Database Management System",
-						subtitle1: "Hoover Karate Academy",
+						subtitles: ["Hoover Karate Academy"],
 						slug: "HKADB",
 						text: [
 							"One of my earliest major development projects, the HKA Database Management System was designed in response to a drastic need for improvement to the school's pre-existing system for tracking student records. It affords users a simple, intuitive interface for managing almost all aspects of the school's operations, including attendance, student progression through the various ranks, tuition payment, and the generation of assorted administrative paperwork. It serves to automate a number of process that were previously done by hand, saving considerable time for the school's administrative staff.",
@@ -92,7 +93,7 @@
 							"The system is built on Microsoft Access, with data located in a separate MySQL database. It implements a custom designed set of authentication mechanisms (as none were present in Access at the time of development), and facilitates simultaneous access from both local and remote users to afford convenience to the school's staff.",
 						],
 						icon: "HKADB.png",
-						iconRight: "2",
+						iconRight: true,
 						avatarSquare: true,
 						Alt: "Screenshot of the main menu of the HKA Database Application"
 					},
@@ -100,4 +101,4 @@
 			}
 		},
 	}
-</script> -->
+</script>

@@ -38,6 +38,10 @@ const items = [
 	route: '/work'
   },
   {
+	label: 'Education',
+	route: '/education'
+  },
+  {
     label: 'Projects',
 	route: 'projects'
   },
