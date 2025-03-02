@@ -12,11 +12,11 @@
 			but it crashes if those aren't optional too, so clearly something screwy is going on.-->
 			
 			<router-link v-if="item?.route" v-slot="{ href, navigate }" :to="item?.route" custom>
-				<a v-ripple :href="href" v-bind="props.action" @click="navigate">
+				<a v-bind="props.action" v-ripple :href="href" @click="navigate">
 					<span>{{ item.label }}</span>
 				</a>
 			</router-link>
-			<a v-else v-ripple :href="item?.url" :target="item?.target" v-bind="props?.action">
+			<a v-else v-bind="props?.action" v-ripple :href="item?.url" :target="item?.target" >
 				<span>{{ item?.label }}</span>
 				<span v-if="hasSubmenu" class="pi pi-fw pi-angle-down" />
 			</a>

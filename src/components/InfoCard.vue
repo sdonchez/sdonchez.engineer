@@ -17,7 +17,7 @@
 				<div class="w-2/3 p-4" v-if="card.icon">
 					<p v-for="para in card.text" :key="para" v-html="para" class="pb-4"></p>
 					<p v-if="card.actions" class="flex flex-wrap justify-center gap-2">
-						<Button v-for="action in card.actions" :key="action.link" variant="primary" :href="action.link" target="_blank" class="!text-white inline-flex w-auto mt-2">{{action.text}}</Button>
+						<Button v-for="action in card.actions" :as="'a'" :key="action.link" variant="primary" :href="action.link" target="_blank" class="!text-white inline-flex w-auto mt-2">{{action.text}}</Button>
 					</p>
 				</div>
 				<div class="w-full" v-else>
@@ -25,7 +25,7 @@
 						<p v-html="para"></p>
 					</div>
 					<p v-for="action in card.actions" :key="action.link" class="text-center">
-						<Button variant="primary" :href="action.link" target="_blank" class="mt-1">{{action.text}}</Button>
+						<Button :as="'a'" variant="primary" :href="action.link" target="_blank" class="mt-1">{{action.text}}</Button>
 					</p>
 				</div>
 			</div>
