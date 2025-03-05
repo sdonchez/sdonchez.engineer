@@ -13,14 +13,14 @@
 					<picture>
 						<source
 							type="image/webp"
-							srcset="./../assets/HeadshotCrop-512.webp"
+							srcset="/images/HeadshotCrop-512.webp"
 						/>
 						<source
 							type="image/jpeg"
-							srcset="./../assets/HeadshotCrop-512.jpg"
+							srcset="/images/HeadshotCrop-512.jpg"
 						/>
 						<img
-							src="./../assets/HeadshotCrop-256.jpg"
+							src="/images/HeadshotCrop-256.jpg"
 							class="rounded-full min-[1520px]:h-[320px] min-[1520px]:w-[320px] h-[256px] w-[256px]"
 							width="320px"
 							height="320px"
@@ -130,22 +130,22 @@ p {
 }
 
 #welcome-panel {
-	background-image: url("./../assets/oreo.jpg"); /* fallback */
+	background-image: url("/images/oreo.jpg"); /* fallback */
 	background-image: image-set(
-		url("./../assets/oreo-1080.webp") 1x type("image/webp"),
-		url("./../assets/oreo-1920.webp") 2x type("image/webp"),
-		url("./../assets/oreo-3840.webp") 3x type("image/webp"),
-		url("./../assets/oreo-1080.jpg") 1x type("image/jpeg"),
-		url("./../assets/oreo-1920.jpg") 2x type("image/jpeg"),
-		url("./../assets/oreo-3840.jpg") 3x type("image/jpeg")
+		url("/images/oreo-1080.webp") 1x type("image/webp"),
+		url("/images/oreo-1920.webp") 2x type("image/webp"),
+		url("/images/oreo-3840.webp") 3x type("image/webp"),
+		url("/images/oreo-1080.jpg") 1x type("image/jpeg"),
+		url("/images/oreo-1920.jpg") 2x type("image/jpeg"),
+		url("/images/oreo-3840.jpg") 3x type("image/jpeg")
 	);
 	background-image: -webkit-image-set(
-		url("./../assets/oreo-1080.webp") 1x type("image/webp"),
-		url("./../assets/oreo-1920.webp") 2x type("image/webp"),
-		url("./../assets/oreo-3840.webp") 3x type("image/webp"),
-		url("./../assets/oreo-1080.jpg") 1x type("image/jpeg"),
-		url("./../assets/oreo-1920.jpg") 2x type("image/jpeg"),
-		url("./../assets/oreo-3840.jpg") 3x type("image/jpeg")
+		url("/images/oreo-1080.webp") 1x type("image/webp"),
+		url("/images/oreo-1920.webp") 2x type("image/webp"),
+		url("/images/oreo-3840.webp") 3x type("image/webp"),
+		url("/images/oreo-1080.jpg") 1x type("image/jpeg"),
+		url("/images/oreo-1920.jpg") 2x type("image/jpeg"),
+		url("/images/oreo-3840.jpg") 3x type("image/jpeg")
 	);
 	background-repeat: no-repeat;
 	background-size: cover;

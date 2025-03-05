@@ -4,9 +4,11 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "vite --host",
+		"dev" : "vite",
+		"dev-net": "vite --host",
 		"build": "vite build",
 		"serve": "vite preview",
+		"preview-net": "vite preview --host",
 		"lint": "eslint --ext .js,.vue --fix src",
 		"format": "prettier .  --write",
 		"sharp": "node ./scripts/sharp.js"

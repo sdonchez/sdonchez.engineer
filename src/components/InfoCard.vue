@@ -94,7 +94,7 @@ import Button from "primevue/button";
 export default {
 	props: ["card"],
 	setup(props) {
-		const imageUrl = new URL("../assets/", import.meta.url).href;
+		const imageUrl = new URL("/images/", import.meta.url).href;
 
 		// You can access `props.card.iconRight` inside setup()
 		const getIconOrder = () => {
