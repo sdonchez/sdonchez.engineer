@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<Menubar :model="items" class="flex flex-row flex-nowrap !py-4">
+		<!-- Breakpoint on Menubar is set based on the length of the menu items to prevent it from wrapping to a second line-->
+		<Menubar :model="items" class="flex flex-row flex-nowrap !py-4" breakpoint="1020px">
 			<template #start
 				><a
 					class="flex flex-row items-center name-title"
@@ -58,7 +59,7 @@ import Menubar from "primevue/menubar";
 const items = [
 	{
 		label: "Home",
-		route: "/home",
+		route: "/",
 	},
 	{
 		label: "Work Experience",

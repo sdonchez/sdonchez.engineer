@@ -28,7 +28,7 @@ export default {
 	},
 	components: {
 		Navigation,
-		//SiteFooter,
+		SiteFooter,
 	},
 	mounted() {
 		// this.showModal()

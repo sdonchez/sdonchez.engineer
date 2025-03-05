@@ -1,4 +1,4 @@
-<template #container>
+<template>
 	<div class="grow basis-auto flex flex-col">
 		<div
 			id="welcome-panel"
