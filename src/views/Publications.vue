@@ -1,5 +1,7 @@
 <template>
-	<div class="flex shrink basis-auto lg:max-w-[1140px] w-full px-4 ml-auto mr-auto">
+	<div
+		class="flex shrink basis-auto lg:max-w-[1140px] w-full px-4 ml-auto mr-auto"
+	>
 		<div class="flex flex-wrap h-fit">
 			<InfoCard v-for="card in cards" :key="card.title" :card="card" />
 		</div>
@@ -7,17 +9,21 @@
 </template>
 
 <script>
-import InfoCard from "@/components/InfoCard"
+import InfoCard from "@/components/InfoCard";
 export default {
 	name: "Education",
 	components: {
 		InfoCard,
 	},
-	metaInfo:{
+	metaInfo: {
 		title: "Publications",
 		meta: [
-			{ name: 'description', content: "Stephen Donchez's publications, including his Thesis (An Efficient and Secure Architecture for FPGA-Based Multi-Tenant Cloud Applications) and his IEEE publication (Memory Isolation for Multi-Tenant Data Integrity in Cloud MPSoC FPGAs)." }
-		]
+			{
+				name: "description",
+				content:
+					"Stephen Donchez's publications, including his Thesis (An Efficient and Secure Architecture for FPGA-Based Multi-Tenant Cloud Applications) and his IEEE publication (Memory Isolation for Multi-Tenant Data Integrity in Cloud MPSoC FPGAs).",
+			},
+		],
 	},
 	data: () => {
 		return {
@@ -39,28 +45,30 @@ export default {
 					icon: "VUENG.jpg",
 					iconRight: false,
 					Alt: "Villanova College of Engineering Seal",
-					actions:[
+					actions: [
 						{
 							link: "mailto:steve@sdonchez.engineer?subject=Thesis Copy Request",
-							text: "Request a Copy"
+							text: "Request a Copy",
 						},
 						{
 							link: "https://www.proquest.com/docview/2821495143",
-							text: "Access on ProQuest"
+							text: "Access on ProQuest",
 						},
 						{
 							link: "https://github.com/sdonchez/EDF-Scheduler",
-							text: "EDF Scheduler GitHub Repository"
+							text: "EDF Scheduler GitHub Repository",
 						},
 						{
 							link: "https://github.com/sdonchez/isolation-design",
-							text: "Isolation Architecture GitHub Repository"
-						}
-					]
+							text: "Isolation Architecture GitHub Repository",
+						},
+					],
 				},
 				{
 					title: "Memory Isolation for Multi-Tenant Data Integrity in Cloud MPSoC FPGAs",
-					subtitles: ["Conference Article, IEEE International Conference and Workshop on Computing and Communication (IEMCON) 2022"],
+					subtitles: [
+						"Conference Article, IEEE International Conference and Workshop on Computing and Communication (IEMCON) 2022",
+					],
 					slug: "IEMCON",
 					text: [
 						"<span class='font-italic font-weight-bold'>Abstract:</span>",
@@ -70,43 +78,44 @@ export default {
 						"SoC FPGA, cloud computing, memory security, on-chip memory, implementation",
 
 						"<span class='font-italic font-weight-bold'>Accolades:</span>",
-						"<a class='link-accent' href='./IEMCON22BestPaper.jpg' target='_blank'>Best Paper, VLSI and Microelectronic Circuit Embedded Systems, IEEE IEMCON 2022</a>"
+						"<a class='link-accent' href='./IEMCON22BestPaper.jpg' target='_blank'>Best Paper, VLSI and Microelectronic Circuit Embedded Systems, IEEE IEMCON 2022</a>",
 					],
 					actions: [
 						{
 							link: "https://ieeexplore.ieee.org/document/9946490/",
 							text: "View Paper on IEEExplore",
-						}
+						},
 					],
 					/*noinspect*/
 					icon: "IEEECS.png",
 					iconRight: true,
-					Alt: "IEEE Computer Society Logo"
+					Alt: "IEEE Computer Society Logo",
 				},
 				{
 					title: "Dynamic Scheduling of AES Cores for Aperiodic Tasks on Multi-tenant Cloud FPGAs",
-					subtitles: ["Conference Article, IEEE International Conference on Trust, Security, and Privacy in Computing and Communications (TrustCom) 2023"],
+					subtitles: [
+						"Conference Article, IEEE International Conference on Trust, Security, and Privacy in Computing and Communications (TrustCom) 2023",
+					],
 					slug: "TrustCom",
 					text: [
 						"<span class='font-italic font-weight-bold'>Abstract:</span>",
 						"Field Programmable Gate Arrays (FPGAs) have long been utilized in systems benefiting from hardware acceleration of processes unsuitable for execution on a traditional processor. Accordingly, as much of the world pivots from on-site datacenters and computing resources to hybrid or cloud based platforms, Multi-processing System-on-Chip (MPSoC) FPGAs are increasingly being employed in cloud computing systems to speed up many computation-intensive applications. In cloud computing, multi-tenant FPGAs are constantly space- and time-shared among multiple tenants dynamically by leveraging the partial reconfiguration property of FPGAs. With increasing security and privacy concerns introduced by these memory-based volatile devices, most countermeasures rely on encryption and decryption engines such as AES (Advanced Encryption Standard) cores for user data protection. However, their high-resource requirements and long latency limit the number of such engines that can be implemented in hardware. They often become a performance bottleneck during peak time. In this paper, we propose a scheduling algorithm for aperiodic tasks to dynamically share multiple AES cores and hence to improve their utilization and overall system performance. Extensive experimental measurements on an FPGA development board featuring a Xilinx Ultrascale+ FPGA demonstrate the efficacy of our mechanism.",
 
 						"<span class='font-italic font-weight-bold'>Index Terms:</span>",
-						"FPGA, Security, Scheduling, Implementation, AES, Multi-tenancy, Cloud Computing"
+						"FPGA, Security, Scheduling, Implementation, AES, Multi-tenancy, Cloud Computing",
 					],
 					actions: [
 						{
 							link: "https://ieeexplore.ieee.org/document/10538753/",
 							text: "View Paper on IEEExplore",
-						}
+						},
 					],
 					/*noinspect*/
 					icon: "IEEECS.png",
-					Alt: "IEEE Computer Society Logo"
-
-				}
+					Alt: "IEEE Computer Society Logo",
+				},
 			],
-		}
+		};
 	},
-}
+};
 </script>
