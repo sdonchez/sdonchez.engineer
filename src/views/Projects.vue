@@ -37,6 +37,7 @@ export default {
 					],
 					icon: "ConceptDiagramSimplified.png",
 					iconRight: true,
+					iconPreview: true,
 					avatarSquare: true,
 					Alt: "Concept Diagram depicting the architecture presented in the Thesis",
 				},
@@ -55,6 +56,7 @@ export default {
 					],
 					icon: "ChemCat.png",
 					avatarSquare: true,
+					iconPreview: true,
 					Alt: "Screenshot of the ChemCAT Dashboard",
 				},
 				{
@@ -69,6 +71,7 @@ export default {
 					icon: "VUTCWebsite.png",
 					iconRight: true,
 					avatarSquare: true,
+					iconPreview: true,
 					Alt: "Screenshot from the legacy VUTC website",
 				},
 				{
@@ -89,6 +92,7 @@ export default {
 					],
 					icon: "PrintCheck3D.jpg",
 					avatarSquare: true,
+					iconPreview: true,
 					Alt: "Picture of a 3D printer monitored by PrintCheck3D",
 				},
 				{
@@ -103,6 +107,7 @@ export default {
 					icon: "HKADB.png",
 					iconRight: true,
 					avatarSquare: true,
+					iconPreview: true,
 					Alt: "Screenshot of the main menu of the HKA Database Application",
 				},
 			],

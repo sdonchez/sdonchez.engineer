@@ -6,7 +6,6 @@
 
 <!--suppress JSUnresolvedFunction -->
 <script>
-console.log("url", import.meta.url);
 import Navigation from "@/components/Navigation";
 import SiteFooter from "@/components/SiteFooter";
 

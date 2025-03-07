@@ -19,26 +19,50 @@
 					class="flex text-center p-4 w-1/3 items-center"
 					:class="getIconOrder()"
 				>
-					<picture>
-						<source
-							type="image/webp"
-							:srcset="`${imageUrl}/${card.icon.split('.').slice(0, -1).join('.')}-256.webp`"
-						/>
-						<source
-							type="image/jpeg"
-							:srcset="`${imageUrl}/${card.icon.split('.').slice(0, -1).join('.')}-256.${card.icon.split('.').slice(-1)}`"
-						/>
-						<img
-							:src="`${imageUrl}/${card.icon.split('.').slice(0, -1).join('.')}-256.${card.icon.split('.').slice(-1)}`"
-							:class="{
-								'rounded-full': !card.avatarSquare,
-								'img-fluid': true,
-							}"
-							width="320px"
-							height="320px"
-							:alt="card.alt"
-						/>
-					</picture>
+					<Image :preview="card.iconPreview">
+						<template #image>
+							<picture>
+								<source
+									type="image/webp"
+									:srcset="`/images/${card.icon.split('.').slice(0, -1).join('.')}-256.webp`"
+								/>
+								<source
+									type="image/jpeg"
+									:srcset="`/images/${card.icon.split('.').slice(0, -1).join('.')}-256.${card.icon.split('.').slice(-1)}`"
+								/>
+								<img
+									:src="`/images/${card.icon.split('.').slice(0, -1).join('.')}-256.${card.icon.split('.').slice(-1)}`"
+									:class="{
+										'rounded-full': !card.avatarSquare,
+										'img-fluid': true,
+									}"
+									width="320px"
+									height="320px"
+									:alt="card.alt"
+								/>
+							</picture>
+						</template>
+						<template #original>
+							<picture>
+								<source
+									type="image/webp"
+									:srcset="`/images/${card.icon.split('.').slice(0, -1).join('.')}-1920.webp`"
+								/>
+								<source
+									type="image/jpeg"
+									:srcset="`/images/${card.icon.split('.').slice(0, -1).join('.')}-1920.${card.icon.split('.').slice(-1)}`"
+								/>
+								<img
+									:src="`/images/${card.icon.split('.').slice(0, -1).join('.')}-1920.${card.icon.split('.').slice(-1)}`"
+									:class="{
+										'rounded-full': !card.avatarSquare,
+										'img-fluid': true,
+									}"
+									:alt="card.alt"
+								/>
+							</picture>
+						</template>
+					</Image>
 				</div>
 				<div v-if="card.icon" class="w-2/3 p-4">
 					<p
@@ -94,8 +118,6 @@ import Button from "primevue/button";
 export default {
 	props: ["card"],
 	setup(props) {
-		const imageUrl = new URL("/images/", import.meta.url).href;
-
 		// You can access `props.card.iconRight` inside setup()
 		const getIconOrder = () => {
 			const iconOrderClass = props.card.iconRight
@@ -104,7 +126,13 @@ export default {
 			return iconOrderClass;
 		};
 
-		return { imageUrl, getIconOrder };
+		return { getIconOrder };
 	},
 };
 </script>
+
+<style>
+.p-image-toolbar {
+	visibility: hidden;
+}
+</style>
