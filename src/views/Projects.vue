@@ -9,21 +9,12 @@
 </template>
 <!--suppress SpellCheckingInspection -->
 <script>
+import { useHead } from '@unhead/vue';
 import InfoCard from "@/components/InfoCard";
 export default {
 	name: "Projects",
 	components: {
 		InfoCard,
-	},
-	metaInfo: {
-		title: "Projects",
-		meta: [
-			{
-				name: "description",
-				content:
-					"Stephen Donchez's projects, including his research on FPGAs, various web applications, Capstone project, and Database Management Application.",
-			},
-		],
 	},
 	data: () => {
 		return {
@@ -112,6 +103,18 @@ export default {
 				},
 			],
 		};
+	},
+	mounted() {
+		useHead({
+			title: 'Projects',
+			meta: [
+				{
+					name: "description",
+					content:
+						"Stephen Donchez's projects, including his research on FPGAs, various web applications, Capstone project, and Database Management Application.",
+				},
+			],
+		});
 	},
 };
 </script>

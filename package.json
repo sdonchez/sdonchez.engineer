@@ -16,6 +16,7 @@
 	"dependencies": {
 		"@fontsource/roboto": "^5.1.1",
 		"@primeuix/themes": "^1.0.0",
+		"@unhead/vue": "^2.0.2",
 		"eslint-define-config": "^2.1.0",
 		"primeicons": "^7.0.0",
 		"primevue": "^4.3.1",

@@ -13,21 +13,12 @@
 </template>
 
 <script>
+import { useHead } from '@unhead/vue';
 import CertificationCard from "@/components/CertificationCard";
 export default {
 	name: "Certifications",
 	components: {
 		CertificationCard,
-	},
-	metaInfo: {
-		title: "Certifications",
-		meta: [
-			{
-				name: "description",
-				content:
-					"Stephen Donchez's certifications, including his Object Management Group (OMG)-Certified SysML Professional (OCSMP)-Model User Certification",
-			},
-		],
 	},
 	data: () => {
 		return {
@@ -70,6 +61,16 @@ export default {
 		credlyScript.setAttribute("type", "text/javascript");
 		credlyScript.async = true;
 		document.head.appendChild(credlyScript);
+		useHead({
+			title: 'Certifications',
+			meta: [
+				{
+					name: "description",
+					content:
+						"Stephen Donchez's certifications, including his Object Management Group (OMG)-Certified SysML Professional (OCSMP)-Model User Certification",
+				},
+			],
+		});
 	},
 };
 </script>

@@ -8,21 +8,12 @@
 	</div>
 </template>
 <script>
+import { useHead } from '@unhead/vue';
 import InfoCard from "@/components/InfoCard";
 export default {
 	name: "WorkExperience",
 	components: {
 		InfoCard,
-	},
-	metaInfo: {
-		title: "Work Experience",
-		meta: [
-			{
-				name: "description",
-				content:
-					"Stephen Donchez's work experience, including time at L3Harris Technologies (formerly Harris Corporation), Villanova University Tech Crew, Villanova's Department of Environmental Health and Safety, and Hoover Karate Academy.",
-			},
-		],
 	},
 	data: () => {
 		return {
@@ -124,6 +115,18 @@ export default {
 				},
 			],
 		};
+	},
+	mounted() {
+		useHead({
+			title: 'Work Experience',
+			meta: [
+				{
+					name: "description",
+					content:
+						"Stephen Donchez's work experience, including time at L3Harris Technologies (formerly Harris Corporation), Villanova University Tech Crew, Villanova's Department of Environmental Health and Safety, and Hoover Karate Academy.",
+				},
+			],
+		});
 	},
 };
 </script>

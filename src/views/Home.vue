@@ -75,20 +75,34 @@
 
 <script>
 // @ is an alias to /src
+import { useHead } from '@unhead/vue';
 
 export default {
 	name: "Home",
 	components: {},
-	metaInfo: {
-		title: "Home",
-		meta: [
-			{
-				name: "description",
-				content:
-					"Stephen Donchez is a Systems Engineer with a passion for embedded systems security, a martial artist, an event production technician, and (most importantly) a ball thrower for his dog.",
-			},
-		],
+	mounted() {
+		useHead({
+			title: 'Home',
+			meta: [
+				{
+					name: "description",
+					content:
+						"Stephen Donchez is a Systems Engineer with a passion for embedded systems security, a martial artist, an event production technician, and (most importantly) a ball thrower for his dog.",
+				},
+			],
+		});
 	},
+	// metaInfo: {
+	// 	title: "Home",
+	// 	meta: [
+	// 		{
+	// 			name: "description",
+	// 			content:
+	// 				"Stephen Donchez is a Systems Engineer with a passion for embedded systems security, a martial artist, an event production technician, and (most importantly) a ball thrower for his dog.",
+	// 		},
+	// 	],
+	// },
+
 };
 </script>
 

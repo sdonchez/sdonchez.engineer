@@ -6,30 +6,31 @@
 
 <!--suppress JSUnresolvedFunction -->
 <script>
+import { useHead } from '@unhead/vue';
 import Navigation from "@/components/Navigation";
 import SiteFooter from "@/components/SiteFooter";
 
 // noinspection JSUnusedGlobalSymbols
 export default {
 	name: "App",
-	metaInfo: {
-		titleTemplate: "%s | Stephen Donchez",
-		htmlAttrs: {
-			lang: "en-us",
-		},
-		meta: [
-			{ charset: "utf-8" },
-			{
-				name: "viewport",
-				content: "width=device-width, initial-scale=1",
-			},
-		],
-	},
 	components: {
 		Navigation,
 		SiteFooter,
 	},
 	mounted() {
+		useHead({
+			titleTemplate: '%s | Stephen Donchez',
+			htmlAttrs: {
+				lang: "en-us"
+			},
+			meta: [
+				{ charset: 'utf-8' },
+				{
+					name: 'viewport',
+					content: 'width=device-width, initial-scale=1',
+				},
+			],
+		});
 		// this.showModal()
 	},
 	methods: {
