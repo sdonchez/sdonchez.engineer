@@ -35,7 +35,7 @@
 				</h1>
 			</div>
 		</div>
-		<div class="bg-primary px-5">
+		<div class="bg-primary px-5 home-content">
 			<h2 class="mx-auto text-center">
 				A Systems Engineer, but a whole lot more
 			</h2>
@@ -181,5 +181,9 @@ p {
 			font-size: calc(0.8rem + 0.9vw);
 		}
 	}
+}
+
+.home-content {
+	color: white,
 }
 </style>

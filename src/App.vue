@@ -1,5 +1,8 @@
 <template>
-	<navigation></navigation>
+	<navigation
+		:is-dark-mode="isDarkMode"
+		@toggle-dark-mode="toggleDarkMode"
+	></navigation>
 	<router-view class="flex-fill grow" />
 	<SiteFooter></SiteFooter>
 </template>
@@ -17,6 +20,11 @@ export default {
 		Navigation,
 		SiteFooter,
 	},
+	data() {
+		return {
+			isDarkMode: false,
+		};
+	},
 	mounted() {
 		useHead({
 			titleTemplate: '%s | Stephen Donchez',
@@ -31,16 +39,21 @@ export default {
 				},
 			],
 		});
-		// this.showModal()
+		const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+		this.isDarkMode = prefersDarkScheme.matches;
+		if (this.isDarkMode) {
+			document.documentElement.classList.add('app-theme-dark')
+		}
 	},
 	methods: {
-		// showModal() {
-		// 	// noinspection JSUnresolvedFunction
-		//   this.$refs["WIP-modal"].show()
-		// },
-		// hideModal() {
-		// 	this.$refs["WIP-modal"].hide()
-		// },
+		toggleDarkMode() {
+			this.isDarkMode = !this.isDarkMode;
+			if (this.isDarkMode) {
+				document.documentElement.classList.add('app-theme-dark');
+			} else {
+				document.documentElement.classList.remove('app-theme-dark');
+			}
+		},
 	},
 };
 </script>

@@ -114,3 +114,8 @@ export default {
 	},
 };
 </script>
+<style>
+footer {
+	color: white;
+}
+</style>

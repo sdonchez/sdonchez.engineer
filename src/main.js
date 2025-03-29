@@ -27,7 +27,7 @@ app.use(PrimeVue, {
 	theme: {
 		preset: SGDPreset,
 		options: {
-			darkModeSelector: "system",
+			darkModeSelector: ".app-theme-dark",
 		},
 	},
 });

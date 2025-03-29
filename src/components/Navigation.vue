@@ -4,7 +4,7 @@
 		<Menubar
 			:model="items"
 			class="flex flex-row flex-nowrap !py-4"
-			breakpoint="1020px"
+			breakpoint="1065px"
 		>
 			<template #start
 				><a
@@ -61,6 +61,17 @@
 					<span v-if="hasSubmenu" class="pi pi-fw pi-angle-down" />
 				</a>
 			</template>
+
+			<template #end>
+				<div class="p-menubar-item" @click="toggleDarkMode">
+					<div class="p-menubar-item-content">
+						<i
+							class="p-menubar-item-link"
+							:class="isDarkMode ? 'pi pi-sun' : 'pi pi-moon'"
+						></i>
+					</div>
+				</div>
+			</template>
 		</Menubar>
 	</div>
 </template>
@@ -72,6 +83,21 @@ import { onMounted, ref, watch } from "vue";
 const route = useRoute();
 const currentRoute = ref(route);
 const hoveredItem = ref(null); // To store the hovered item
+
+const props = defineProps({
+	isDarkMode: {
+		type: Boolean,
+		required: true,
+	},
+});
+
+// Define the event to emit 'toggle-dark-mode' to parent (App.vue)
+const emit = defineEmits(['toggle-dark-mode']);
+
+// Method to emit the 'toggle-dark-mode' event to the parent component
+const toggleDarkMode = () => {
+	emit('toggle-dark-mode');
+};
 
 const isActive = (path) => {
 	return route.path === path;
@@ -93,7 +119,7 @@ const isHovered = (path) => {
 
 const isAnyHovered =() => {
 	return Boolean(hoveredItem.value)
-}
+};
 
 const items = ref([
 	{
@@ -154,5 +180,12 @@ const items = ref([
 	background: var(--p-menubar-background) !important;
 	transition-property: background;
 	transition-duration: (--p-menubar-transition-duration);
+}
+
+.p-menubar-end {
+	display: inline-flex;
+	@media (width <= 1065px) {
+		margin-left: 0px !important;
+	}
 }
 </style>

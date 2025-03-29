@@ -16,10 +16,13 @@
 		<template #content>
 			<div class="flex flex-wrap">
 				<div
-					class="flex text-center p-4 lg:w-1/3 items-center"
+					class="flex text-center p-4 lg:w-1/3 items-center w-full"
 					:class="getIconOrder()"
 				>
-					<Image :preview="card.iconPreview">
+					<Image
+						:preview="card.iconPreview"
+						class="w-full flex items-center justify-center"
+					>
 						<template #image>
 							<picture>
 								<source
