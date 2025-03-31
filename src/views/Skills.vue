@@ -1,23 +1,20 @@
 <template>
-	<b-container>
-		<b-row>
+	<div
+		class="flex shrink basis-auto lg:max-w-[1140px] w-full px-4 ml-auto mr-auto"
+	>
+		<div class="flex flex-wrap h-fit">
 			<SkillCard v-for="card in cards" :key="card.title" :card="card" />
-		</b-row>
-	</b-container>
+		</div>
+	</div>
 </template>
 
 <script>
-import SkillCard from "@/components/SkillCard"
+import { useHead } from "@unhead/vue";
+import SkillCard from "@/components/SkillCard";
 export default {
 	name: "Skills",
 	components: {
 		SkillCard,
-	},	
-	metaInfo:{
-		title: "Skills",
-		meta: [
-			{ name: 'description', content: "Stephen Donchez's skills, including both Technical Skills (Programming Languages, Process and Concepts, and Tools and Software), as well as Creative Skills (Multimedia Asset Generation, Event Production Software and Platforms, and Other Event Production Skills)." }
-		]
 	},
 	data: () => {
 		return {
@@ -32,28 +29,28 @@ export default {
 						{
 							title: "Programming Languages",
 							bullets: [
-									"SysML",
-									"C++",
-									"C",
-									"VHDL",
-									"PHP",
-									"MySQL",
-									"HTML",
-									"CSS",
-									"JS (Vue, jQuery)",
-									"Assembly (x86, ARM, MIPS)",
-									"Python",
-									"Java",
-									"Bash",
-									"Matlab",
-									"XML",
-									"LaTeX",
-									"Markdown",
-									"Powershell",
-							]
+								"SysML",
+								"C++",
+								"C",
+								"VHDL",
+								"PHP",
+								"MySQL",
+								"HTML",
+								"CSS",
+								"JS (Vue, jQuery)",
+								"Assembly (x86, ARM, MIPS)",
+								"Python",
+								"Java",
+								"Bash",
+								"Matlab",
+								"XML",
+								"LaTeX",
+								"Markdown",
+								"Powershell",
+							],
 						},
 						{
-							title:"Processes and Concepts",
+							title: "Processes and Concepts",
 							bullets: [
 								"Model-Based Systems Engineering (MBSE)",
 								"Requirements Management",
@@ -64,29 +61,29 @@ export default {
 								"Waterfall Methodology",
 								"Agile Lifecycle",
 								"Containerization and Orchestration",
-								"Routing and Networking"
-							]
+								"Routing and Networking",
+							],
 						},
 						{
 							title: "Tools and Software",
 							bullets: [
-									"IBM DOORS",
-									"Cameo/MagicDraw",
-									"Xilinx Toolchain (Vivado, Vitis, Petalinux)",
-									"Quartus",
-									"Microsoft Visio",
-									"Git/GitHub/BitBucket",
-									"Visual Studio",
-									"IntelliJ",
-									"Eclipse",
-									"Microsoft Office",
-									"MySQL Workbench",
-									"Microsoft Access",
-									"Solidworks",
-									"Autodesk Inventor"
-							]
+								"IBM DOORS",
+								"Cameo/MagicDraw",
+								"Xilinx Toolchain (Vivado, Vitis, Petalinux)",
+								"Quartus",
+								"Microsoft Visio",
+								"Git/GitHub/BitBucket",
+								"Visual Studio",
+								"IntelliJ",
+								"Eclipse",
+								"Microsoft Office",
+								"MySQL Workbench",
+								"Microsoft Access",
+								"Solidworks",
+								"Autodesk Inventor",
+							],
 						},
-					]
+					],
 				},
 				{
 					title: "Creative Skills",
@@ -94,44 +91,56 @@ export default {
 					text: [
 						"I have also acquired a set of creative skills, ranging from multimedia production to live audio, video, and lighting:",
 					],
-					skills:[
+					skills: [
 						{
 							title: "Multimedia Asset Generation",
 							bullets: [
-									"Adobe Premiere",
-									"Adobe After Effects",
-									"Adobe Audition",
-									"Adobe Photoshop",
-									"Adobe Illustrator",
-									"Adobe Indesign"
-							]
+								"Adobe Premiere",
+								"Adobe After Effects",
+								"Adobe Audition",
+								"Adobe Photoshop",
+								"Adobe Illustrator",
+								"Adobe Indesign",
+							],
 						},
 						{
 							title: "Event Production Software and Platforms",
 							bullets: [
-									"GrandMA 2",
-									"Blackmagic Design ATEM/URSA",
-									"Behringer X32",
-									"Avid SC48",
-									"ADJ MyDMX",
-									"OBS Studio",
-									"Playback Pro"
-							]
+								"GrandMA 2",
+								"Blackmagic Design ATEM/URSA",
+								"Behringer X32",
+								"Avid SC48",
+								"ADJ MyDMX",
+								"OBS Studio",
+								"Playback Pro",
+							],
 						},
 						{
 							title: "Other Event Production Skills",
 							bullets: [
-									"Power Distribution",
-									"Line Array Calculation and Assembly",
-									"Rigging",
-									"Production Plot Generation (Vectorworks)",
-									"Pre-Visualization (MA-3D/Vision)"
-							]
-						}
-					]
-				}
+								"Power Distribution",
+								"Line Array Calculation and Assembly",
+								"Rigging",
+								"Production Plot Generation (Vectorworks)",
+								"Pre-Visualization (MA-3D/Vision)",
+							],
+						},
+					],
+				},
 			],
-		}
+		};
 	},
-}
+	mounted() {
+		useHead({
+			title: "Skills",
+			meta: [
+				{
+					name: "description",
+					content:
+						"Stephen Donchez's skills, including both Technical Skills (Programming Languages, Process and Concepts, and Tools and Software), as well as Creative Skills (Multimedia Asset Generation, Event Production Software and Platforms, and Other Event Production Skills).",
+				},
+			],
+		});
+	},
+};
 </script>

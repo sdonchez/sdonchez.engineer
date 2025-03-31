@@ -1,49 +1,43 @@
-import '@babel/polyfill'
-import 'mutationobserver-shim'
-import Vue from 'vue'
-import './plugins/bootstrap-vue'
-import VueMeta from 'vue-meta'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import "@babel/polyfill";
+import "mutationobserver-shim";
+import "./style.css";
+import PrimeVue from "primevue/config";
+import SGDPreset from "./plugins/primeVue";
+import App from "./App.vue";
+import { createRouter } from "./router";
 import VueGtag from "vue-gtag";
+import Tooltip from "primevue/tooltip";
+import { createHead } from "@unhead/vue/client";
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faVuejs } from '@fortawesome/free-brands-svg-icons'
-import { faFontAwesome } from '@fortawesome/free-brands-svg-icons'
-import { faStackOverflow } from '@fortawesome/free-brands-svg-icons'
-import { faBootstrap } from '@fortawesome/free-brands-svg-icons'
-import { faNpm } from '@fortawesome/free-brands-svg-icons'
-import { faCloudflare } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+const router = createRouter();
 
+const app = createApp(App);
 
-library.add(faEnvelope)
-library.add(faGithub)
-library.add(faLinkedin)
-library.add(faVuejs)
-library.add(faBootstrap)
-library.add(faFontAwesome)
-library.add(faStackOverflow)
-library.add(faNpm)
-library.add(faCloudflare)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+// Use createHead to enable page titles and SEO instead of vue-meta, which is not vue-3 compatible and has been abandoned
+const head = createHead();
 
-Vue.config.productionTip = false
+app.use(head);
 
-Vue.use(VueGtag, {
+app.use(router);
+
+app.directive("tooltip", Tooltip);
+
+app.use(PrimeVue, {
+	theme: {
+		preset: SGDPreset,
+		options: {
+			darkModeSelector: ".app-theme-dark",
+		},
+	},
+});
+
+app.use(VueGtag, {
 	config: {
-		id: "G-TT76YTVCYJ"
-	}
-}, router);
+		id: "G-TT76YTVCYJ",
+	},
+});
 
-Vue.use(VueMeta)
+app.config.globalProperties.$resumeFile = "SDonchezResumeDec24.pdf";
 
-Vue.prototype.$resumeFile = "SDonchezResumeDec24.pdf"
-
-new Vue({
-	router,
-	render: h => h(App)
-}).$mount('#app')
+app.mount("#app");

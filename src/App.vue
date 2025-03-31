@@ -1,46 +1,63 @@
 <template>
-	<div id="app" style="overflow-x: hidden;" class="min-vh-100 d-flex flex-column">
-		<navigation></navigation>
-		<router-view class="flex-fill"/>
-		<SiteFooter></SiteFooter>
-	</div>
+	<navigation
+		:is-dark-mode="isDarkMode"
+		@toggle-dark-mode="toggleDarkMode"
+	></navigation>
+	<router-view class="flex-fill grow" />
+	<SiteFooter></SiteFooter>
 </template>
 
 <!--suppress JSUnresolvedFunction -->
 <script>
-import Navigation from "@/components/Navigation"
-import SiteFooter from "@/components/SiteFooter"
+import { useHead } from "@unhead/vue";
+import Navigation from "@/components/Navigation";
+import SiteFooter from "@/components/SiteFooter";
 
 // noinspection JSUnusedGlobalSymbols
 export default {
-	name: "app",
-	metaInfo: {
-		titleTemplate: '%s | Stephen Donchez',
-		htmlAttrs: {
-			lang: 'en-us'
-		},
-		meta: [
-			{ charset: 'utf-8' },
-			{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
-		]
-	},
+	name: "App",
 	components: {
 		Navigation,
 		SiteFooter,
 	},
-	methods: {
-		// showModal() {
-		// 	// noinspection JSUnresolvedFunction
-    //   this.$refs["WIP-modal"].show()
-		// },
-		// hideModal() {
-		// 	this.$refs["WIP-modal"].hide()
-		// },
+	data() {
+		return {
+			isDarkMode: false,
+		};
 	},
 	mounted() {
-		// this.showModal()
+		useHead({
+			titleTemplate: "%s | Stephen Donchez",
+			htmlAttrs: {
+				lang: "en-us",
+			},
+			meta: [
+				{ charset: "utf-8" },
+				{
+					name: "viewport",
+					content: "width=device-width, initial-scale=1",
+				},
+			],
+		});
+		const prefersDarkScheme = window.matchMedia(
+			"(prefers-color-scheme: dark)"
+		);
+		this.isDarkMode = prefersDarkScheme.matches;
+		if (this.isDarkMode) {
+			document.documentElement.classList.add("app-theme-dark");
+		}
 	},
-}
+	methods: {
+		toggleDarkMode() {
+			this.isDarkMode = !this.isDarkMode;
+			if (this.isDarkMode) {
+				document.documentElement.classList.add("app-theme-dark");
+			} else {
+				document.documentElement.classList.remove("app-theme-dark");
+			}
+		},
+	},
+};
 </script>
 
 <style lang="scss">
@@ -48,10 +65,11 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 //noinspection CssUnknownTarget
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+@import "primeicons/primeicons.css";
 #app {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: "Roboto", "Roboto Slab",serif;
+	font-family: "Roboto", "Roboto Slab", serif;
 	font-display: swap;
 }
 a:hover {

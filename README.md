@@ -5,6 +5,7 @@
 This site is live at https://sdonchez.engineer (as well as https://sdonchez.github.io)
 
 This site is:
--  Built in Vue.JS
--  Styled with Bootstrap
--  Hosted through GitHub Pages
+
+- Built in Vue.JS
+- Styled with Bootstrap
+- Hosted through GitHub Pages

@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@plugin "tailwindcss-primeui";
+
+.link-accent {
+	color: #00bc8c;
+}
+
+/*neither defining this using define preset, nor scoping it to the relevant classes seems to make it take effect*/
+:root {
+	--p-tooltip-background: var(--color-zinc-900) !important;
+}
+
+html:not(.app-theme-dark) {
+	background-color: var(--p-surface-100);
+}
+
+.p-card-title {
+	text-align: center;
+	color: white;
+}
+
+.p-card-caption {
+	background-color: var(--p-surface-700);
+	padding-top: 0.4rem;
+	padding-bottom: 0.6rem;
+	padding-left: 0.4rem;
+	padding-right: 0.4rem;
+}
+h4 {
+	font-size: 1.4rem;
+	padding-bottom: 0.4rem;
+}
+
+@media (width >= 80rem) {
+	h5 {
+		font-size: 1.2rem;
+		padding-bottom: 0.1rem;
+	}
+}
+
+@media (width < 80rem) {
+	h5 {
+		font-size: 0.8rem;
+		padding-bottom: 0.1rem;
+	}
+
+	.p-card-title {
+		font-size: 1.5rem !important;
+	}
+}
