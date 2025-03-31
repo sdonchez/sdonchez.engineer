@@ -16,16 +16,16 @@
 		<template #content>
 			<div class="flex flex-wrap">
 				<div
-					class="flex text-center p-4 w-1/3 items-center"
+					class="flex text-center p-4 lg:w-1/3 items-center w-full"
 					:class="getIconOrder()"
 				>
 					<p class="text-center" v-html="card.credential"></p>
 				</div>
-				<div v-if="card.credential" class="w-2/3 p-4">
+				<div v-if="card.credential" class="lg:w-2/3 p-4">
 					<p
 						v-for="para in card.text"
 						:key="para"
-						class="pb-4"
+						class="pb-4 !text-left !lg:text-justify"
 						v-html="para"
 					></p>
 					<p
@@ -39,7 +39,7 @@
 							variant="primary"
 							:href="action.link"
 							target="_blank"
-							class="!text-white inline-flex w-auto mt-2"
+							class="!text-white inline-flex w-auto mt-2 !text-center"
 							>{{ action.text }}</Button
 						>
 					</p>
