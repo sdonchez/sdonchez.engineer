@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { useHead } from '@unhead/vue';
+import { useHead } from "@unhead/vue";
 import CertificationCard from "@/components/CertificationCard";
 export default {
 	name: "Certifications",
@@ -62,7 +62,7 @@ export default {
 		credlyScript.async = true;
 		document.head.appendChild(credlyScript);
 		useHead({
-			title: 'Certifications',
+			title: "Certifications",
 			meta: [
 				{
 					name: "description",

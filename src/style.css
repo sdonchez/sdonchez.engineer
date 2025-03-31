@@ -10,7 +10,7 @@
 	--p-tooltip-background: var(--color-zinc-900) !important;
 }
 
-html:not(.app-theme-dark){
+html:not(.app-theme-dark) {
 	background-color: var(--p-surface-100);
 }
 

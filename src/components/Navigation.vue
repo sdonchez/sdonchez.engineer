@@ -34,8 +34,10 @@
 					v-slot="{ href, navigate }"
 					:to="item?.route"
 					:class="{
-						'menuItem-active-link': (isActive(item.route)&&!isAnyHovered()),
-						'menuItem-noFocus' : (!isActive(item.route) && !isHovered(item.route))
+						'menuItem-active-link':
+							isActive(item.route) && !isAnyHovered(),
+						'menuItem-noFocus':
+							!isActive(item.route) && !isHovered(item.route),
 					}"
 					custom
 					@mouseover="handleMouseOver(item.route)"
@@ -92,11 +94,11 @@ const props = defineProps({
 });
 
 // Define the event to emit 'toggle-dark-mode' to parent (App.vue)
-const emit = defineEmits(['toggle-dark-mode']);
+const emit = defineEmits(["toggle-dark-mode"]);
 
 // Method to emit the 'toggle-dark-mode' event to the parent component
 const toggleDarkMode = () => {
-	emit('toggle-dark-mode');
+	emit("toggle-dark-mode");
 };
 
 const isActive = (path) => {
@@ -117,8 +119,8 @@ const isHovered = (path) => {
 	return hoveredItem.value === path;
 };
 
-const isAnyHovered =() => {
-	return Boolean(hoveredItem.value)
+const isAnyHovered = () => {
+	return Boolean(hoveredItem.value);
 };
 
 const items = ref([

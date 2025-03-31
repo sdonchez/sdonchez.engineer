@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { useHead } from '@unhead/vue';
+import { useHead } from "@unhead/vue";
 import SkillCard from "@/components/SkillCard";
 export default {
 	name: "Skills",
@@ -132,14 +132,14 @@ export default {
 	},
 	mounted() {
 		useHead({
-			title: 'Skills',
+			title: "Skills",
 			meta: [
 				{
 					name: "description",
 					content:
 						"Stephen Donchez's skills, including both Technical Skills (Programming Languages, Process and Concepts, and Tools and Software), as well as Creative Skills (Multimedia Asset Generation, Event Production Software and Platforms, and Other Event Production Skills).",
 				},
-		],
+			],
 		});
 	},
 };

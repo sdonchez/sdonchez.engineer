@@ -75,14 +75,14 @@
 
 <script>
 // @ is an alias to /src
-import { useHead } from '@unhead/vue';
+import { useHead } from "@unhead/vue";
 
 export default {
 	name: "Home",
 	components: {},
 	mounted() {
 		useHead({
-			title: 'Home',
+			title: "Home",
 			meta: [
 				{
 					name: "description",
@@ -102,7 +102,6 @@ export default {
 	// 		},
 	// 	],
 	// },
-
 };
 </script>
 
@@ -184,6 +183,6 @@ p {
 }
 
 .home-content {
-	color: white,
+	color: white;
 }
 </style>

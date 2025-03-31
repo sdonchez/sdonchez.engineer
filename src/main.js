@@ -8,7 +8,7 @@ import App from "./App.vue";
 import { createRouter } from "./router";
 import VueGtag from "vue-gtag";
 import Tooltip from "primevue/tooltip";
-import { createHead } from '@unhead/vue/client'
+import { createHead } from "@unhead/vue/client";
 
 const router = createRouter();
 

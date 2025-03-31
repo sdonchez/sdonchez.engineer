@@ -9,7 +9,7 @@
 </template>
 <!--suppress SpellCheckingInspection -->
 <script>
-import { useHead } from '@unhead/vue';
+import { useHead } from "@unhead/vue";
 import InfoCard from "@/components/InfoCard";
 export default {
 	name: "Projects",
@@ -106,7 +106,7 @@ export default {
 	},
 	mounted() {
 		useHead({
-			title: 'Projects',
+			title: "Projects",
 			meta: [
 				{
 					name: "description",

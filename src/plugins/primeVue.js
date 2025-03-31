@@ -39,7 +39,7 @@ const SGDPreset = definePreset(Aura, {
 			root: {
 				background: "{primary.400}",
 				borderColor: "{primary.400}",
-				borderRadius: "0"
+				borderRadius: "0",
 			},
 			item: {
 				focusBackground: "{primary.600}",
@@ -52,7 +52,7 @@ const SGDPreset = definePreset(Aura, {
 				color: "white",
 				focusColor: "white",
 				activeColor: "white",
-				hoverColor: "white"
+				hoverColor: "white",
 			},
 			submenu: {
 				background: "{primary.400}",
@@ -61,12 +61,12 @@ const SGDPreset = definePreset(Aura, {
 			},
 		},
 		card: {
-			colorScheme : {
+			colorScheme: {
 				dark: {
 					root: {
 						background: "{surface.800}",
 					},
-				}
+				},
 			},
 			title: {
 				font: {
@@ -75,11 +75,9 @@ const SGDPreset = definePreset(Aura, {
 				color: "white",
 			},
 			subtitle: {
-				color: "white"
+				color: "white",
 			},
-			caption: {
-				
-			}
+			caption: {},
 		},
 	},
 });

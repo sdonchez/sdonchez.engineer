@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { useHead } from '@unhead/vue';
+import { useHead } from "@unhead/vue";
 import InfoCard from "@/components/InfoCard";
 export default {
 	name: "Education",
@@ -70,7 +70,7 @@ export default {
 	},
 	mounted() {
 		useHead({
-			title: 'Education',
+			title: "Education",
 			meta: [
 				{
 					name: "description",

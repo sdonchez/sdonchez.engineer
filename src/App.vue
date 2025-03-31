@@ -9,7 +9,7 @@
 
 <!--suppress JSUnresolvedFunction -->
 <script>
-import { useHead } from '@unhead/vue';
+import { useHead } from "@unhead/vue";
 import Navigation from "@/components/Navigation";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -27,31 +27,33 @@ export default {
 	},
 	mounted() {
 		useHead({
-			titleTemplate: '%s | Stephen Donchez',
+			titleTemplate: "%s | Stephen Donchez",
 			htmlAttrs: {
-				lang: "en-us"
+				lang: "en-us",
 			},
 			meta: [
-				{ charset: 'utf-8' },
+				{ charset: "utf-8" },
 				{
-					name: 'viewport',
-					content: 'width=device-width, initial-scale=1',
+					name: "viewport",
+					content: "width=device-width, initial-scale=1",
 				},
 			],
 		});
-		const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+		const prefersDarkScheme = window.matchMedia(
+			"(prefers-color-scheme: dark)"
+		);
 		this.isDarkMode = prefersDarkScheme.matches;
 		if (this.isDarkMode) {
-			document.documentElement.classList.add('app-theme-dark')
+			document.documentElement.classList.add("app-theme-dark");
 		}
 	},
 	methods: {
 		toggleDarkMode() {
 			this.isDarkMode = !this.isDarkMode;
 			if (this.isDarkMode) {
-				document.documentElement.classList.add('app-theme-dark');
+				document.documentElement.classList.add("app-theme-dark");
 			} else {
-				document.documentElement.classList.remove('app-theme-dark');
+				document.documentElement.classList.remove("app-theme-dark");
 			}
 		},
 	},

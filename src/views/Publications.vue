@@ -10,7 +10,7 @@
 
 <script>
 import InfoCard from "@/components/InfoCard";
-import { useHead } from '@unhead/vue';
+import { useHead } from "@unhead/vue";
 export default {
 	name: "Education",
 	components: {
@@ -110,7 +110,7 @@ export default {
 	},
 	mounted() {
 		useHead({
-			title: 'Publications',
+			title: "Publications",
 			meta: [
 				{
 					name: "description",
