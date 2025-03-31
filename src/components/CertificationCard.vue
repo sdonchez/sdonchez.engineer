@@ -19,7 +19,10 @@
 					class="flex text-center p-4 lg:w-1/3 items-center w-full"
 					:class="getIconOrder()"
 				>
-					<p class="text-center" v-html="card.credential"></p>
+					<p
+						class="w-full flex items-center justify-center"
+						v-html="card.credential"
+					></p>
 				</div>
 				<div v-if="card.credential" class="lg:w-2/3 p-4">
 					<p
