@@ -2,10 +2,10 @@
 
 ## Welcome to the repo for my personal website!
 
-This site is live at https://sdonchez.engineer (as well as https://sdonchez.github.io)
+This site is live at https://sdonchez.engineer
 
 This site is:
 
 - Built in Vue.JS
-- Styled with Bootstrap
-- Hosted through GitHub Pages
+- Styled with PrimeVue and TailwindCSS
+- Hosted through Cloudflare Pages
